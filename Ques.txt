@@ -1,0 +1,84 @@
+1. Problem Statement
+
+The pandemic Covid has badly impacted everyone's life across the globe in the year 2020. Assessing the available data related to patients, treatments, post Covid prognosis. recovery rate and many other such information will help hospitals and health organizations to evaluate what care approaches are most effective. This can also help in understanding what is the effect of medication on patients with history of other illness such as cardiac problems, diabetics, cancer etc.
+
+All data related to Covid pandemic have continuously been monitored and analyzed to find the intensity of its spread. A sample of such data that has been captured from different locations on daily basis. You are required to get some useful insights by processing this data using the Big Data platform Hadoop and its ecosystem components.
+
+Listed below are few reports expected from analysis:
+
+What is the number of people who are infected globally?
+
+How many cases are reported in a continent?
+
+Which country has recorded maximum number of deaths due to Covid?
+
+How many people are vaccinated so far?
+
+----------
+
+Task 2: Data Analysis using Hive
+
+1. Create a Hive internal table(CovidDatawarehouse) for the dataset 19 (CovidGlobalData.csv), provide schema accordingly and load the data into the table.
+
+[date_current may be created as String and later converted to Date]
+
+2 Count the number of vaccinations available in each location using a Hive Query
+
+3. List the number of vaccinations available on location names starting with 'United.*"
+
+4 Partition the CovidDatawarehouse table based on the values of the column 'continent
+
+5 Count the number of continents and distribute the CovidDatawarehouse table data randomly into 4 number of buckets as per the number of continents
+
+6. Find the maximum, minimum and average number of people infected with Covid in each bucket
+
+7. Create a Hive query to find the number of deaths in each continent
+
+8. Create a Hive query to find the average diabetes prevalence for the country 'Israel"
+
+------------
+
+
+Task 3: Data processing with Spark
+
+Data pre-processing: Create RDDs and Data Frames needed to perform the below operations.
+
+Find the total number of cases in each continent
+
+Find the total number of deaths in each location
+
+Compute the maximum deaths at specific locations like 'Europe' and 'Asia'
+
+Find the total number of people vaccinated at each continent
+
+Find the count of country wise vaccination for the month "January 2021"
+
+What is the average number of total cases across all locations?
+
+Which continent has the highest total number of vaccinations?
+
+Extract the year, month, and day from the date current column and create separate columns for each
+
+
+---------
+
+2. Problem Statement
+
+Task 1: Ingesting data from MySQL to HDFS using Sqoop and working on HDFS commands.
+
+1. Create a new HDFS directory called CovidHDFS.
+
+2. Move the data from the MySQL table CovidData into HDFS directory named CovidHDFS using Sqoop import with a single mapper argument.
+
+3. Copy the files from CovidHDFS directory to CovidData_Backup
+
+4. Display first 1 KB of data using appropriate HDFS command (Hint: head)
+
+5. Display last 1 KB of data using appropriate HDFS command (Hint: tail)
+
+6. Transfer the data from the table 'CovidData in MySQL to HDFS directory SqoopCovidAsiaData using Sqoop. Output file should contain only Asia related Covid
+
+details.
+
+7. Transfer the data from the table 'CovidData' in MySQL to HDFS directory Sqoop Non Vaccinated using Sqoop. Ouput file should contain only details of people not been vaccinated
+
